@@ -5,31 +5,57 @@
 }
 html {
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 body {
     background-color: lightgray;
     font-family: 'Public Sans', sans-serif;
     color: hsl(233, 8%, 62%);
     font-weight: 400;
+    padding-top: 80px;
 }
-.header {
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.desktop--header {
     width: 100%;
     height: 80px;
     background-color: white;
-    padding: 0 130px;
+    padding: 0 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.mobile--header {
+    display: none;
+}
 .nav--list {
+    height: 100%;
     display: flex;
     gap: 25px;
     list-style: none;
     font-size: 15px;
 }
 .nav--list > li {
+    height: 100%;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.nav--list > li > div {
+    margin-top: 30px;
+}
+.hover--strip {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
 button {
     width: fit-content;
@@ -40,4 +66,431 @@ button {
     color: hsl(220, 16%, 96%);
     background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     cursor: pointer;
+}
+button:hover {
+    opacity: 0.6;
+}
+p {
+    line-height: 25px;
+}
+.first--section {
+    width: 100%;
+    height: 580px;
+    padding: 0 120px;
+    background: url("./images//bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 580px -260px;
+    background-color: #fafafa;
+    position: relative;
+}
+.first--section > div {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.first--section > div > p {
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+.first--section > img {
+    width: 52%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(110px, -110px);
+}
+h1 {
+    font-size: 50px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.second--section {
+    width: 100%;
+    padding: 110px 120px;
+    background-color: #F4F5F7;
+}
+h2 {
+    font-size: 35px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.second--section--top {
+    margin-bottom: 80px;
+}
+.second--section--bottom {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 0.25fr);
+}
+h3 {
+    font-size: 25px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.third--section {
+    width: 100%;
+    padding: 100px 120px;
+    background-color: #FAFAFA;
+}
+.third--section > div {
+    width: 100%;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 0.25fr);
+}
+.blog--box {
+    background-color: white;
+    border-radius: 5px;
+}
+.blog--box > img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+.blog--box > div {
+    width: 100%;
+    padding: 20px;
+}
+.writer {
+    font-size: 10px;
+    margin-bottom: 10px;
+    line-height: 10px;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+    cursor: pointer;
+}
+h4:hover {
+    color: hsl(136, 65%, 51%);
+}
+.blog--text {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 10px;
+}
+footer {
+    width: 100%;
+    padding: 50px 120px;
+    background-color: #2D314E;
+    display: flex;
+    justify-content: space-between;
+}
+.left--half {
+    width: 52%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo--media > div {
+    display: flex;
+    margin-top: 30px;
+}
+.logo--media > div > img {
+    margin: 0 7px;
+    cursor: pointer;
+}
+.logo--media > div > img:hover {
+    background-color: hsl(136, 65%, 51%);
+}
+.logo--media > span {
+    position: relative;
+}
+.easy {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    left: 30px;
+    bottom: 1px;
+}
+.left--half > ul {
+    list-style: none;
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    line-height: 30px;
+}
+.left--half > ul > li {
+    cursor: pointer;
+}
+.left--half > ul > li:hover {
+    color: hsl(136, 65%, 51%);
+}
+.copy--div {
+    text-align: right;
+}
+.copy--div > button {
+    margin-bottom: 20px;
+}
+.copy--div > p {
+    font-size: 14px;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!mobile!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!mobile!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!mobile!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (max-width: 1025px) {
+    body {
+        background-color: lightgray;
+        font-family: 'Public Sans', sans-serif;
+        color: hsl(233, 8%, 62%);
+        font-weight: 400;
+        padding-top: 70px;
+    }
+    .desktop--header {
+        display: none;
+    }
+    .mobile--header {
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu {
+        cursor: pointer;
+        width: 27px;
+        height: 18px;
+        animation: rotate 0.4s ease-out;
+    }
+    .close {
+        cursor: pointer;
+        width: 25px;
+        height: 18px;
+        height: auto;
+        animation: rotate 0.4s ease-out;
+    }
+    @keyframes rotate {
+        0% {
+            transform: scale(0.1, 0.1) rotate(180deg);
+        }
+        100% {
+            transform: scale(1, 1) rotate(360deg);
+        }
+    }
+    .dropdown {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        padding-top: 25px;
+        top: 70px;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+        color: black;
+        z-index: 2;
+    }
+    .nav--list {
+        width: 88%;
+        height: fit-content;
+        margin: auto;
+        padding: 30px 0;
+        background-color: white;
+        list-style: none;
+        display: block;
+        font-size: 1.7rem;
+        border-radius: 10px;
+    }
+    .nav--list > li {
+        width: 100%;
+        text-align: center;
+        height: fit-content;
+        padding: 11px 0;
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+    .nav--list > li > div {
+        margin-top: 30px;
+    }
+    .hover--strip {
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    }
+    button {
+        width: fit-content;
+        height: fit-content;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 50px;
+        color: hsl(220, 16%, 96%);
+        background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: 0.6;
+    }
+    p {
+        line-height: 25px;
+    }
+    .first--section {
+        width: 100%;
+        height: 650px;
+        padding: 0 15px;
+        background: url("./images/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0px -70px;
+        background-color: #fafafa;
+        position: relative;
+    }
+    .first--section > div {
+        width: 100%;
+        padding: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .first--btn {
+        margin: 0 auto;
+    }
+    .first--section > div > p {
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+    .first--section > img {
+        min-width: 350px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: -120px;
+        transform: translateX(-50%);
+    }
+    h1 {
+        font-size: 40px;
+        font-weight: 300;
+        color: hsl(233, 26%, 24%);
+    }
+    .second--section {
+        width: 100%;
+        padding: 110px 15px;
+        background-color: #F4F5F7;
+    }
+    h2 {
+        font-size: 35px;
+        font-weight: 300;
+        color: hsl(233, 26%, 24%);
+    }
+    .second--section--top {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .second--section--bottom {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    h3 {
+        font-size: 25px;
+        font-weight: 300;
+        color: hsl(233, 26%, 24%);
+    }
+    .third--section {
+        width: 100%;
+        padding: 100px 15px;
+        background-color: #FAFAFA;
+    }
+    .third--section > div {
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+    }
+    .blog--box {
+        background-color: white;
+        border-radius: 5px;
+    }
+    .blog--box > img {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px 5px 0 0;
+    }
+    .blog--box > div {
+        width: 100%;
+        padding: 20px;
+    }
+    .writer {
+        font-size: 10px;
+        margin-bottom: 10px;
+        line-height: 10px;
+    }
+    h4 {
+        font-size: 16px;
+        font-weight: 300;
+        color: hsl(233, 26%, 24%);
+        cursor: pointer;
+    }
+    h4:hover {
+        color: hsl(136, 65%, 51%);
+    }
+    .blog--text {
+        font-size: 13px;
+        line-height: 17px;
+        margin-top: 10px;
+    }
+    footer {
+        width: 100%;
+        padding: 50px 15px;
+        background-color: #2D314E;
+        display: flex;
+        justify-content: space-between;
+    }
+    .left--half {
+        width: 52%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo--media > div {
+        display: flex;
+        margin-top: 30px;
+    }
+    .logo--media > div > img {
+        margin: 0 7px;
+        cursor: pointer;
+    }
+    .logo--media > div > img:hover {
+        background-color: hsl(136, 65%, 51%);
+    }
+    .logo--media > span {
+        position: relative;
+    }
+    .easy {
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        position: absolute;
+        left: 30px;
+        bottom: 1px;
+    }
+    .left--half > ul {
+        list-style: none;
+        font-size: 14px;
+        color: white;
+        font-weight: 300;
+        line-height: 30px;
+    }
+    .left--half > ul > li {
+        cursor: pointer;
+    }
+    .left--half > ul > li:hover {
+        color: hsl(136, 65%, 51%);
+    }
+    .copy--div {
+        text-align: right;
+    }
+    .copy--div > button {
+        margin-bottom: 20px;
+    }
+    .copy--div > p {
+        font-size: 14px;
+    }
 }
