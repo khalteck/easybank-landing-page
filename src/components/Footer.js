@@ -20,7 +20,7 @@ export default function Footer() {
                         <img alt="" src={instaagram}/>
                     </div>
                 </div>
-                <ul>
+                <ul className="about--ul">
                     <li>About Us</li>
                     <li>Contact</li>
                     <li>Blog</li>
